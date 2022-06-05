@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import logo from './logo.svg';
 import './Prueba1.css';
 
 async function getUserByID(id) {
@@ -42,8 +41,6 @@ function Prueba1() {
         <div className="input-container">
           <label>User ID </label>
           <input type="text" name="uid" required />
-          <label>User Pass </label>
-          <input type="password" name="upass" required />
         </div>
         <div className="button-container">
           <input type="submit" value="Send Request" />
