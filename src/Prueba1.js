@@ -4,7 +4,6 @@ import './Prueba1.css';
 
 async function getUserByID(id) {
  return fetch('http://127.0.0.1:8090/user/' + id, {
-   method: 'GET',
    headers: {
      'Content-Type': 'application/json'
    }
@@ -23,11 +22,13 @@ function Prueba1() {
     event.preventDefault();
 
     // Obtenemos Textos
-    var {uid, upass}  = document.forms[0];
+    var {uid}  = document.forms[0];
 
-    alert(upass.value);
+    
     // Find user login info
     const user = await getUserByID(uid.value);
+
+    alert(user);
     
     setUserData(user);
     setIsUSer(true);
